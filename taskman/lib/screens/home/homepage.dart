@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:taskman/screens/home/widgets/goPremium.dart';
+import 'package:taskman/screens/home/widgets/tasks.dart';
 
 class homePage extends StatelessWidget {
   @override
@@ -13,7 +14,17 @@ class homePage extends StatelessWidget {
       body: Column(
         // ignore: prefer_const_literals_to_create_immutables
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [goPremium()],
+        children: [
+          goPremium(),
+          Container(
+            padding: EdgeInsets.all(10),
+            child: Text(
+              'Tasks',
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Expanded(child: tasks())
+        ],
       ),
     );
   }
