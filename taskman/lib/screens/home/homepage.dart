@@ -26,6 +26,49 @@ class homePage extends StatelessWidget {
           Expanded(child: tasks())
         ],
       ),
+      bottomNavigationBar: _buildBottomNavigationBar(),
+      floatingActionButtonLocation:
+          FloatingActionButtonLocation.miniCenterDocked,
+      floatingActionButton: FloatingActionButton(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
+        elevation: 2,
+        backgroundColor: Colors.black,
+        onPressed: () {},
+        child: Icon(
+          Icons.add,
+          size: 40,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildBottomNavigationBar() {
+    return Container(
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30), topRight: Radius.circular(30))),
+      child: ClipRRect(
+        borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+        // ignore: prefer_const_literals_to_create_immutables
+        child: BottomNavigationBar(
+            backgroundColor: Colors.white,
+            showSelectedLabels: false,
+            showUnselectedLabels: false,
+            selectedItemColor: Colors.lightBlueAccent,
+            unselectedItemColor: Colors.blueGrey,
+            // ignore: prefer_const_literals_to_create_immutables
+            items: [
+              BottomNavigationBarItem(
+                  label: 'Home', icon: Icon(Icons.home_rounded, size: 30)),
+              BottomNavigationBarItem(
+                label: 'Person',
+                icon: Icon(Icons.person_rounded),
+              )
+            ]),
+      ),
     );
   }
 

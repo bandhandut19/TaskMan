@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 // YELLOW COLOR
 const Color kYellowlight = Color(0xFFFFF7EC);
 const Color kYellow = Color(0xFFFAF0DA);
-const Color kYellowDark = Color(0xFFEBB7F);
+const Color kYellowDark = Color(0xFFEBBB7F);
 
 // RED COLOR
 const Color kRedlight = Color(0xFFFCF0F0);
