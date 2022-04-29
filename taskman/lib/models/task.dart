@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:taskman/constants/color.dart';
 
@@ -40,6 +42,15 @@ class task {
         btncolor: kRed,
         left: 0,
         done: 0,
+      ),
+      task(
+        iconData: Icons.book,
+        title: 'Study',
+        bgcolor: kRedlight,
+        iconcolor: kRedDark,
+        btncolor: kRed,
+        left: 3,
+        done: 1,
       ),
       task(
         iconData: Icons.favorite_rounded,
