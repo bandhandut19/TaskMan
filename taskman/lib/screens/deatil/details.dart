@@ -9,11 +9,24 @@ class details extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent,
+      backgroundColor: Color.fromARGB(255, 177, 230, 255),
       body: CustomScrollView(
         slivers: [
           _buildAppBar(context),
         ],
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
+      floatingActionButton: FloatingActionButton(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
+        elevation: 2,
+        backgroundColor: Colors.black,
+        onPressed: () {},
+        child: Icon(
+          Icons.add,
+          size: 40,
+        ),
       ),
     );
   }
@@ -21,18 +34,18 @@ class details extends StatelessWidget {
   Widget _buildAppBar(BuildContext context) {
     return SliverAppBar(
       // BACK BUTTON CODE
-      expandedHeight: 90,
+      expandedHeight: 70,
       backgroundColor: Colors.blueGrey,
       leading: IconButton(
         onPressed: () => Navigator.of(context).pop(),
         icon: Icon(Icons.arrow_back_ios),
-        iconSize: 20,
+        iconSize: 15,
       ),
       // ignore: prefer_const_literals_to_create_immutables
       actions: [
         Icon(
           Icons.more_vert,
-          size: 40,
+          size: 30,
         )
       ],
       flexibleSpace: FlexibleSpaceBar(
@@ -42,14 +55,14 @@ class details extends StatelessWidget {
           children: [
             Text(
               '${Task.title} tasks',
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
             ),
             SizedBox(
               height: 5,
             ),
             Text(
               'Add your ${Task.title} tasks here',
-              style: TextStyle(fontSize: 12),
+              style: TextStyle(fontSize: 8),
             )
           ],
         ),
